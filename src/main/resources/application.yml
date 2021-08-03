@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: contact-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/contactbook?createDatabaseIfNotExist=true
+    username: root
+    password: admin
+    hikari:
+      max-lifetime: 10000
+      connection-timeout: 1000
+      maximum-pool-size: 3
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    hibernate:
+      ddl-auto: update
